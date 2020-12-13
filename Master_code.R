@@ -1,5 +1,5 @@
 # Netflix data analysis 
-  # the exploration of Netflix data from 2008-2019
+  # the exploration of Netflix data from 2008-2020
   # For more information on the data please see the link below 
   # DATA: https://www.kaggle.com/shivamb/netflix-shows
 
@@ -86,7 +86,7 @@ Netflix_year <- Netflix %>%
 
 # Add up all the unique values in the year column
   summarise(summed_year = sum(year)) %>%
-  
+
 # Divide the sum by unique values to get the count of each unique value 
   mutate(titles_in_year = summed_year/year) %>%
 
@@ -94,9 +94,10 @@ Netflix_year <- Netflix %>%
   filter(titles_in_year > 15)
 
 # Plot the result 
-ggplot2::ggplot(Netflix_year, 
-                aes(x = year, 
-                    y = titles_in_year)) + 
-  geom_bar(stat="identity") + 
-  xlab("Year") +
-  ylab("Films released") 
+ggplot(Netflix_year, 
+              aes(x = factor(year), 
+                  y = titles_in_year)) + 
+geom_bar(stat="identity") + 
+xlab("Year") +
+ylab("Films released") +
+theme_grey(base_size = 15)
