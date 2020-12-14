@@ -45,7 +45,7 @@ Note, some of these (lubridate and ggplot2 for example) are included within the 
 ```r
 $ git clone https://github.com/Elliot-JG/Netflix.git
 ```
-* Alternatively, press the green button at the top of this page and unzip the folder in an appropriate place  ![](https://github.com/Elliot-JG/GY7702_assignment/blob/main/READ_ME_graphics/repo_access_clip.PNG)  
+* Alternatively, press the green button at the top of this page and unzip the folder in an appropriate place  ![](https://github.com/Elliot-JG/Netflix/blob/main/READ_ME_graphics/repo_access_clip.PNG)  
 
 ## :octopus: Guide to the files <a name="guide"></a>
 * **Master_code.R**  
