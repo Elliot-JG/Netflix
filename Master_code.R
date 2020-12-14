@@ -43,15 +43,17 @@ Netflix_avg_time <-Netflix %>%
 # Specify data in avg_time as an integer
 Netflix_avg_time$avg_time <- as.integer(Netflix_avg_time$avg_time)
 
+# Put multiple genres on new lines for plotting
+Netflix_avg_time$listed_in <- sub(',', ',\n', Netflix_avg_time$listed_in)
 
 # Plot up the result 
-ggplot2::ggplot(tail(Netflix_avg_time), 
-                aes(x = reorder(listed_in, avg_time), 
-                    y = avg_time)) + 
-  geom_bar(stat="identity") + 
-  xlab("Film genre") +
-  ylab("Average time (minutes)") 
-
+ggplot(tail(Netflix_avg_time), 
+              aes(x = reorder(listed_in, avg_time), 
+                  y = avg_time)) + 
+geom_bar(stat="identity") + 
+xlab("Film genre") +
+ylab("Average length (minutes)")+
+theme_grey(base_size = 20)
 
 
 # Assess how many films and TV shows were released in each year -----------
@@ -91,8 +93,12 @@ Netflix_year <- Netflix %>%
   mutate(titles_in_year = summed_year/year) %>%
 
 # Threshold to plot more years where less films were released
-  filter(titles_in_year > 15)
-
+  filter(titles_in_year > 15) %>%
+  
+# 2020 data is not complete yet so let's remove that. 
+# If you want to include it, just comment out this line
+  subset(!(year == "2020"))
+  
 # Plot the result 
 ggplot(Netflix_year, 
               aes(x = factor(year), 
@@ -100,4 +106,4 @@ ggplot(Netflix_year,
 geom_bar(stat="identity") + 
 xlab("Year") +
 ylab("Films released") +
-theme_grey(base_size = 15)
+theme_grey(base_size = 25)
