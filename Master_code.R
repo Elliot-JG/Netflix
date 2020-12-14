@@ -16,7 +16,7 @@ library(lubridate)
 
 # Splitting the 'duration' at the 'min' mark for further analysis was proving... difficult, so this bit was done in Excel. 
 # I am SURE I will come back to this!
-Netflix <- read_csv("C:/Users/44792/Desktop/Netflix/Netflix_titles.csv")
+Netflix <- read_csv("C:/...Netflix/Netflix_titles.csv")
 
 # Start pipe, with input 'Netflix'
 Netflix_avg_time <-Netflix %>%
@@ -57,7 +57,7 @@ theme_grey(base_size = 20)
 
 # Assess how many films and TV shows were released in each year -----------
 
-Netflix <- read_csv("C:/Users/44792/Desktop/Netflix/Netflix_titles.csv")
+Netflix <- read_csv("C:/.../Netflix/Netflix_titles.csv")
 
 # There's a lot of stuff we don't need here so lets take it out
 Netflix <- subset(Netflix, select = -c(show_id, director, type, cast, country, release_year, duration, Time, listed_in))
