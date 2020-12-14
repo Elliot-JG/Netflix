@@ -12,8 +12,8 @@ During this process I learnt how to:
 
 This assignment is broken down into 2 stages: 
 
-1. Analyse the average length of different film genres 
-2. Analyse the number of films released each year
+1. Analysis of the average length of different film genres 
+2. Analysis of the number of films released each year
 
 
 This repository contains data licensed under [CCO Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
