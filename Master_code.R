@@ -8,7 +8,6 @@
 
 library(tidyverse)
 library(readr)
-library(stringr)
 library(ggplot2)
 library(lubridate)
 
